@@ -7,6 +7,7 @@ This guide provides the necessary commands and steps to follow before and after 
 1. **Ensure You Are on Your Branch**  
    Always verify that you're on the correct branch before making changes.
    ```bash
+   git branch
    git checkout <your-branch>
 
 2. **Pull the Latest Changes from Main**
@@ -15,7 +16,7 @@ This guide provides the necessary commands and steps to follow before and after 
     git pull origin main
 
 3. **Handle Conflicts (If Any)**
-    If you face merge conflicts while pulling, Git will notify you. Resolve them manually, then stage and commit the resolved changes.
+    If you face merge conflicts while pulling, Git will notify you. Resolve them manually, then stage and commit the resolved changes. If you get "Already up to date." you can skip this step.
     ```bash
     git add <conflicted-files>
     git commit -m "Resolved merge conflict"
