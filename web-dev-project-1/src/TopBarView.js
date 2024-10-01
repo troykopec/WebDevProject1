@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './TopBarView.css';
-import HomeView from './PageViews/Homeview.js';
-import ContactView from './PageViews/ContactView.js';
-import ProjectView from './PageViews/ProjectView.js';
-import AboutView from './PageViews/AboutView.js';
+import HomeView from './PageViews/HomeView/Homeview.js';
+import ContactView from './PageViews/ContactView/ContactView.js';
+import ProjectView from './PageViews/ProjectView/ProjectView.js';
+import AboutView from './PageViews/AboutView/AboutView.js';
 
 function TopBarView({ onComponentChange }) {  // Pass down the handler
   return (
