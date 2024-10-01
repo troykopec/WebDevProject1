@@ -3,10 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import ExampleComponent from './ExampleComponent';
 import TopBarView from './TopBarView';
-import HomeView from './PageViews/Homeview.js';
-import ContactView from './PageViews/ContactView.js';
-import ProjectView from './PageViews/ProjectView.js';
-import AboutView from './PageViews/AboutView.js';
+import HomeView from './PageViews/HomeView/Homeview.js';
+import ContactView from './PageViews/ContactView/ContactView.js';
+import ProjectView from './PageViews/ProjectView/ProjectView.js';
+import AboutView from './PageViews/AboutView/AboutView.js';
 
 function App() {
   const [activeComponent, setActiveComponent] = useState(<ExampleComponent />); // Initial component
