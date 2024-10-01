@@ -1,0 +1,48 @@
+
+.topbar {
+    width: 100%;               /* Full width */
+    height: 200px;               /* Height of the top bar */
+    background-color: aqua;     /* Dark background color */
+    color: white;               /* White text color */
+    display: flex;
+    align-items: center;        /* Vertically centers content */
+    justify-content: center;   /* Centers items horizontally */
+    padding: 0 20px;            /* Adds padding on the left and right */
+    box-sizing: border-box;
+  }
+
+.vstack {
+    display: flex;
+    flex-direction: column;  /* This makes items stack vertically */
+    gap: 5px;               /* Adds space between the items */
+    align-items: center;      /* Aligns items horizontally to the center */
+    padding: 0px;
+  }
+
+.hstack {
+    display: flex;
+    flex-direction: row;      /* Stack items horizontally */
+    gap: 80px;                /* Space between horizontal items */
+  }
+
+.logoimg { 
+    padding-top: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+.selection-buttons {
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+    color: white;                   /* White text */
+    padding: 15px 30px;             /* Padding around the button */
+    border: none;                   /* Remove default borders */
+    border-radius: 8px;             /* Rounded corners */
+    font-size: 16px;                /* Font size */
+    font-weight: bold;              /* Bold text */
+    text-transform: uppercase;      /* Uppercase text */
+    letter-spacing: 1px;            /* Spacing between letters */
+    cursor: pointer;                /* Pointer cursor on hover */
+    transition: all 0.3s ease;      /* Smooth transition for hover effects */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    outline: none;                  /* Remove focus outline */
+}
