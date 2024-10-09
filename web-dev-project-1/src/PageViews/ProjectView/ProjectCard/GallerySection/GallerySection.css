@@ -1,0 +1,19 @@
+.gallery-section {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .gallery-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    justify-items: center;
+  }
+  
+  .gallery-icon {
+    height: 32px;
+    width: 32px;
+    margin: 4px;
+    cursor: pointer;
+  }
+  
