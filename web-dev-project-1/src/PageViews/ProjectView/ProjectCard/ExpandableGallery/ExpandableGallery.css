@@ -1,0 +1,178 @@
+/* ExpandableGallery.css */
+
+  /* Updated styles to move the expandable gallery upwards */
+  .expandable-gallery-container {
+    width: 100%; /* Match the width of the parent container */
+    background-color: #f0f0f0; /* Slightly lighter background for a modern look */
+    border: 1px solid #ddd;
+    margin-top: -17px; /* Move the gallery upwards for better alignment */
+    padding: 16px;
+    animation: slideDown 0.4s ease-out; /* Slide down animation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+    transform-origin: top; /* Make sure the slide happens from the top edge */
+    border-bottom-left-radius: 8px; /* Rounded corner on the bottom-left */
+    border-bottom-right-radius: 8px; /* Rounded corner on the bottom-right */
+
+  }
+
+  
+  @keyframes slideDown {
+    from {
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(0px); /* Slide down from slightly above */
+    }
+    to {
+      max-height: 500px;
+      opacity: 1;
+      transform: translateY(0); /* Slide to its original position */
+    }
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #666; /* Lighter color for a more modern look */
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center; /* Center the button horizontally */
+    display: block; /* Makes sure the button is treated as a block-level element */
+    margin: 0 auto 12px auto; /* Center and add spacing below */
+    transition: color 0.3s ease; /* Smooth color transition for hover effect */
+  }
+  
+  .close-button:hover {
+    color: #000; /* Darker color on hover for contrast */
+  }
+  /* Slide-up animation for closing the gallery */
+  .expandable-gallery-container.closing {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      max-height: 500px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(0px);
+    }
+  }
+
+  /* Fade-out animation for images */
+  .expanded-gallery-images.fade-out {
+    animation: fadeOutImages 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeOutImages {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+    
+  .expanded-gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px; /* Space between images */
+    justify-items: center;
+    opacity: 0; /* Start with images hidden */
+    animation: fadeInImages 0.5s ease-out forwards; /* Fade-in animation for the images */
+    animation-delay: 0.4s; /* Delay to sync with the container's slide-down */
+  }
+  
+  @keyframes fadeInImages {
+    from {
+      opacity: 0; /* Start hidden */
+    }
+    to {
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  .expanded-gallery-image {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures images are not distorted */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  /* ExpandableGallery.css */
+
+.expandable-gallery-container {
+  position: relative;
+  padding: 10px;
+}
+
+.expanded-gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.expanded-gallery-image {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.expanded-gallery-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Fullscreen Modal Styling */
+.fullscreen-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the modal appears above all other content */
+}
+
+/* Fullscreen Modal Styling */
+.fullscreen-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* Ensure the modal appears above all other content */
+}
+
+.fullscreen-modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent; /* Transparent background to focus on the image */
+}
+
+.close-fullscreen-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: rgb(148, 31, 31);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-fullscreen-modal-button:hover {
+  color: red;
+}

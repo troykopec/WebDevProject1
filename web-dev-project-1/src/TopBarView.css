@@ -1,48 +1,55 @@
+/* TopBarView.css */
 
 .topbar {
-    width: 100%;               /* Full width */
-    height: 200px;               /* Height of the top bar */
-    background-color: aqua;     /* Dark background color */
-    color: white;               /* White text color */
-    display: flex;
-    align-items: center;        /* Vertically centers content */
-    justify-content: center;   /* Centers items horizontally */
-    padding: 0 20px;            /* Adds padding on the left and right */
-    box-sizing: border-box;
-  }
-
-.vstack {
-    display: flex;
-    flex-direction: column;  /* This makes items stack vertically */
-    gap: 5px;               /* Adds space between the items */
-    align-items: center;      /* Aligns items horizontally to the center */
-    padding: 0px;
-  }
-
-.hstack {
-    display: flex;
-    flex-direction: row;      /* Stack items horizontally */
-    gap: 80px;                /* Space between horizontal items */
-  }
-
-.logoimg { 
-    padding-top: 0px;
-    width: 100px;
-    height: 100px;
+  background-color: white; /* White background for the top bar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  padding: 10px 0; /* Remove horizontal padding to ensure alignment */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-.selection-buttons {
-    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
-    color: white;                   /* White text */
-    padding: 15px 30px;             /* Padding around the button */
-    border: none;                   /* Remove default borders */
-    border-radius: 8px;             /* Rounded corners */
-    font-size: 16px;                /* Font size */
-    font-weight: bold;              /* Bold text */
-    text-transform: uppercase;      /* Uppercase text */
-    letter-spacing: 1px;            /* Spacing between letters */
-    cursor: pointer;                /* Pointer cursor on hover */
-    transition: all 0.3s ease;      /* Smooth transition for hover effects */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
-    outline: none;                  /* Remove focus outline */
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Limit the max width for better alignment */
+  padding: 0 20px; /* Add padding here to control spacing */
+}
+
+.logoimg {
+  height: 40px;
+  margin-left: 20px; /* Add a small margin to give it some space from the edge */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.selection-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.selection-button:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.vertical-line {
+  height: 30px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
 }

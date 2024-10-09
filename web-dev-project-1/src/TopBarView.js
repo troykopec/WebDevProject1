@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './images/UTampa_logo.png';
 import './TopBarView.css';
 import HomeView from './PageViews/HomeView/Homeview.js';
 import ContactView from './PageViews/ContactView/ContactView.js';
@@ -9,32 +9,37 @@ import AboutView from './PageViews/AboutView/AboutView.js';
 function TopBarView({ onComponentChange }) {  // Pass down the handler
   return (
     <div className="topbar">
-      <div className="vstack">
-        <img src={logo} alt="logo" className="logoimg" />  
+      <div className="topbar-content">
+        <img src={logo} alt="logo" className="logoimg" />
 
-        <div className="hstack">
-          {/* Each button changes to a different component when clicked */}
+        <div className="button-group">
           <button 
-            className="selection-buttons" 
+            className="selection-button" 
             onClick={() => onComponentChange(<HomeView />)}
           >
             Home View
           </button>
+          <div className="vertical-line"></div>
+
           <button 
-            className="selection-buttons" 
+            className="selection-button" 
             onClick={() => onComponentChange(<AboutView />)}
           >
             About View
           </button>
+          <div className="vertical-line"></div>
+
           <button 
-            className="selection-buttons" 
-            onClick={() => onComponentChange(<ContactView />)}
+            className="selection-button" 
+            onClick={() => onComponentChange(<ProjectView />)}
           >
             Project View
           </button>
+          <div className="vertical-line"></div>
+
           <button 
-            className="selection-buttons" 
-            onClick={() => onComponentChange(<ProjectView />)}
+            className="selection-button" 
+            onClick={() => onComponentChange(<ContactView />)}
           >
             Contact View
           </button>
