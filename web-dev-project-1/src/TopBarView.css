@@ -1,0 +1,55 @@
+/* TopBarView.css */
+
+.topbar {
+  background-color: white; /* White background for the top bar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  padding: 10px 0; /* Remove horizontal padding to ensure alignment */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Limit the max width for better alignment */
+  padding: 0 20px; /* Add padding here to control spacing */
+}
+
+.logoimg {
+  height: 40px;
+  margin-left: 20px; /* Add a small margin to give it some space from the edge */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.selection-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.selection-button:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.vertical-line {
+  height: 30px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
