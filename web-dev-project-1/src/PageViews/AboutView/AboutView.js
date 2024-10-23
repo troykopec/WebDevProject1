@@ -1,70 +1,88 @@
-// src/AboutMe.js
-
 import React from 'react';
 import './AboutMe.css';
 
+
+import headshot from './images/headshot.jpg';
+import image2 from './images/tampa1.jpeg';
+import image3 from './images/tampa2.jpg';
+import image4 from './images/tampa3.jpg';
+
 const AboutMe = () => {
   return (
-    <div style={{ width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '20px 0' }}>
-      <div style={{ width: '80%', maxWidth: '1200px' }}>
-      {/* Header */}
-      <header className="header">
-        <h1>About Me</h1>
+    <div className='container'>
+      <header className='header'>
+        <h2>About Me</h2>
       </header>
-      </div>
 
-      {/* Profile Section */}
-      <section className="profile-section">
-        <img 
-          className="headshot" 
-          src="https://via.placeholder.com/150" 
+      <section className="larger-container">
+
+
+        <img
+          className="headshot"
+          src={headshot}
           alt="Headshot"
         />
-        <div className="biography">
-          <h2>Biography</h2>
-          <p>
-            Hello! I'm John Doe, a passionate web developer with experience in React, JavaScript, and front-end development.
-            I love creating interactive and visually appealing web applications.
-          </p>
+
+        <div className="content-right">
+
+
+          <div className="biography">
+            <h2>Biography</h2>
+            <p>
+              Hello! I'm John Doe, a passionate web developer with experience in React, JavaScript, and front-end development.
+              I love creating interactive and visually appealing web applications.
+            </p>
+          </div>
+
+          <section className="skills-section">
+            <h2>Skills</h2>
+            <div className="progress-bar-container">
+              <div className="progress-bar" style={{ width: '80%' }} title="React: 80%"></div>
+              <div className="progress-label">React: 80%</div>
+            </div>
+            <div className="progress-bar-container">
+              <div className="progress-bar" style={{ width: '70%' }} title="JavaScript: 70%"></div>
+              <div className="progress-label">JavaScript: 70%</div>
+            </div>
+            <div className="progress-bar-container">
+              <div className="progress-bar" style={{ width: '90%' }} title="HTML/CSS: 90%"></div>
+              <div className="progress-label">HTML/CSS: 90%</div>
+            </div>
+          </section>
+
+
+          <section className="resume-section">
+            <a
+              className="resume-link"
+              href="https://example.com/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View My Resume
+            </a>
+          </section>
+
+
+          <section className="images-section">
+            <img
+              className="image"
+              src={image2}
+              alt="Image 1"
+            />
+            <img
+              className="image"
+              src={image3}
+              alt="Image 2"
+            />
+            <img
+              className="image"
+              src={image4}
+              alt="Image 3"
+            />
+          </section>
+
         </div>
       </section>
-
-      {/* Skills Section */}
-      <section className="skills-section">
-        <h2>Skills</h2>
-        <img 
-          className="skills-image" 
-          src="https://via.placeholder.com/400x150" 
-          alt="Skills"
-        />
-      </section>
-
-      {/* Resume Section */}
-      <section className="resume-section">
-        <a 
-          className="resume-link" 
-          href="https://example.com/resume.pdf" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          View My Resume
-        </a>
-      </section>
-
-      {/* Images Section */}
-      <section className="images-section">
-        <img 
-          className="image" 
-          src="https://via.placeholder.com/150" 
-          alt="Image 1"
-        />
-        <img 
-          className="image" 
-          src="https://via.placeholder.com/150" 
-          alt="Image 2"
-        />
-      </section>
-
     </div>
   );
 };
