@@ -1,12 +1,68 @@
-import React from 'react';
+// src/AboutMe.js
 
-function AboutView() {
+import React from 'react';
+import './AboutMe.css';
+
+const AboutMe = () => {
   return (
-    <div>
-      <h1>About View!</h1>
-      <p>This is a simple component added to the main app.</p>
+    <div className="about-me-container">
+      {/* Header */}
+      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>About Me</h2>
+
+      
+      {/* Profile Section */}
+      <section className="profile-section">
+        <img 
+          className="headshot" 
+          src="https://via.placeholder.com/150" 
+          alt="Headshot"
+        />
+        <div className="biography">
+          <h2>Biography</h2>
+          <p>
+            Hello! I'm John Doe, a passionate web developer with experience in React, JavaScript, and front-end development.
+            I love creating interactive and visually appealing web applications.
+          </p>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="skills-section">
+        <h2>Skills</h2>
+        <img 
+          className="skills-image" 
+          src="https://via.placeholder.com/400x150" 
+          alt="Skills"
+        />
+      </section>
+
+      {/* Resume Section */}
+      <section className="resume-section">
+        <a 
+          className="resume-link" 
+          href="https://example.com/resume.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          View My Resume
+        </a>
+      </section>
+
+      {/* Images Section */}
+      <section className="images-section">
+        <img 
+          className="image" 
+          src="https://via.placeholder.com/150" 
+          alt="Image 1"
+        />
+        <img 
+          className="image" 
+          src="https://via.placeholder.com/150" 
+          alt="Image 2"
+        />
+      </section>
     </div>
   );
-}
+};
 
-export default AboutView;
+export default AboutMe;

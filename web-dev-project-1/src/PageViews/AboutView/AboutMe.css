@@ -1,0 +1,77 @@
+/* src/AboutMe.css */
+
+.about-me-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .header h1 {
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .headshot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .biography {
+    text-align: left;
+    max-width: 500px;
+  }
+  
+  .biography h2 {
+    color: #666;
+  }
+  
+  .skills-section {
+    margin-bottom: 40px;
+  }
+  
+  .skills-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .resume-section {
+    margin-bottom: 40px;
+  }
+  
+  .resume-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .resume-link:hover {
+    background-color: #0056b3;
+  }
+  
+  .images-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
