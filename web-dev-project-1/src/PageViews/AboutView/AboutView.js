@@ -5,11 +5,14 @@ import './AboutMe.css';
 
 const AboutMe = () => {
   return (
-    <div className="about-me-container">
+    <div style={{ width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '20px 0' }}>
+      <div style={{ width: '80%', maxWidth: '1200px' }}>
       {/* Header */}
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>About Me</h2>
+      <header className="header">
+        <h1>About Me</h1>
+      </header>
+      </div>
 
-      
       {/* Profile Section */}
       <section className="profile-section">
         <img 
@@ -61,6 +64,7 @@ const AboutMe = () => {
           alt="Image 2"
         />
       </section>
+
     </div>
   );
 };
